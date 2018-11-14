@@ -42,3 +42,5 @@ sysinfo.txt
 #bld/
 #[Bb]in/
 #[Oo]bj/
+Library/
+Temp/
