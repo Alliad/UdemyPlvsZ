@@ -1,10 +1,13 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Attacker : MonoBehaviour {
 
-    [Range(-1f, 1.5f)] public float walkSpeed;
+    private float currentSpeed;
+
+    GameObject currentTarget;
     
     // Use this for initialization
 	void Start () {
@@ -13,6 +16,26 @@ public class Attacker : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.Translate(Vector3.left * walkSpeed * Time.deltaTime);
+        transform.Translate(Vector3.left * currentSpeed * Time.deltaTime);
 	}
+
+    private void OnTriggerEnter2D()
+    {
+        Debug.Log(name + " on treggering");
+    }
+
+    public void SetSpeed(float speed)
+    {
+        currentSpeed = speed;
+    }
+
+    public void StrikeCurrentTarget(float damage)
+    {
+        Debug.Log(" Applay +" + damage + " damage from " + name);
+    }
+
+    public void Attack(GameObject gameObject)
+    {
+        currentTarget = gameObject;
+    }
 }
