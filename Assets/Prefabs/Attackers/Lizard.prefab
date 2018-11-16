@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 70299110813632972}
   - component: {fileID: 50311540684927194}
   - component: {fileID: 114579235637006112}
+  - component: {fileID: 114873627502647200}
   m_Layer: 0
   m_Name: Lizard
   m_TagString: Untagged
@@ -149,6 +150,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be776ac5fd41636499633643ca340182, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114873627502647200
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1862536155932094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3274c0bacbb9e814e8071af582df77ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
 --- !u!212 &212564977497089194
 SpriteRenderer:
   m_ObjectHideFlags: 1

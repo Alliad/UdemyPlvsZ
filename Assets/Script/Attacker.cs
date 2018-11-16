@@ -8,10 +8,11 @@ public class Attacker : MonoBehaviour {
     private float currentSpeed;
 
     GameObject currentTarget;
+    Animator animator;
     
     // Use this for initialization
 	void Start () {
-		
+        animator = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -32,6 +33,12 @@ public class Attacker : MonoBehaviour {
     public void StrikeCurrentTarget(float damage)
     {
         Debug.Log(" Applay +" + damage + " damage from " + name);
+        currentTarget.GetComponent<Health>().health -= damage;
+        if (currentTarget.GetComponent<Health>().health <= 0)
+        {
+            Destroy(currentTarget);
+            animator.SetBool("isAttacking", false);
+        }
     }
 
     public void Attack(GameObject gameObject)

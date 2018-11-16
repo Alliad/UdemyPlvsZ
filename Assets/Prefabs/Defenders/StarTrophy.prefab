@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 95544671901911404}
   - component: {fileID: 70018481453914928}
   - component: {fileID: 114306301889338688}
+  - component: {fileID: 114195858879887118}
   m_Layer: 0
   m_Name: StarTrophy
   m_TagString: Untagged
@@ -165,6 +166,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114195858879887118
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1527977821710978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3274c0bacbb9e814e8071af582df77ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 45
 --- !u!114 &114306301889338688
 MonoBehaviour:
   m_ObjectHideFlags: 1

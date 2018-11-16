@@ -25,7 +25,7 @@ public class Lizard : MonoBehaviour {
 
         if (obj.GetComponent<Defender>())
         {
-            animator.SetBool("isAttackingTrigger", true);
+            animator.SetBool("isAttacking", true);
             attacker.Attack(obj);
         }
 
