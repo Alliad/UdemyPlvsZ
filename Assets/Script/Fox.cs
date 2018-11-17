@@ -23,7 +23,7 @@ public class Fox : MonoBehaviour {
     {
         GameObject obj = collision.gameObject;
 
-        if (obj.GetComponent<Attacker>())
+        if (!obj.GetComponent<Defender>())
         {
             //Debug.Log("Fox collied with attacker");
             return;
