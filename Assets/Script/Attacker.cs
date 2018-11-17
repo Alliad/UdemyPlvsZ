@@ -18,6 +18,10 @@ public class Attacker : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         transform.Translate(Vector3.left * currentSpeed * Time.deltaTime);
+        if (!currentTarget)
+        {
+            animator.SetBool("isAttacking", false);
+        }
 	}
 
     private void OnTriggerEnter2D()
@@ -33,12 +37,7 @@ public class Attacker : MonoBehaviour {
     public void StrikeCurrentTarget(float damage)
     {
         Debug.Log(" Applay +" + damage + " damage from " + name);
-        currentTarget.GetComponent<Health>().health -= damage;
-        if (currentTarget.GetComponent<Health>().health <= 0)
-        {
-            Destroy(currentTarget);
-            animator.SetBool("isAttacking", false);
-        }
+        currentTarget.GetComponent<Health>().AplayDamage(damage);        
     }
 
     public void Attack(GameObject gameObject)
