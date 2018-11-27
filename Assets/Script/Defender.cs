@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Defender : MonoBehaviour {
 
-	private void OnTriggerEnter2D()
+	/*private void OnTriggerEnter2D()
     {
         Debug.Log(name + " on treggering");
-    }
+    }*/
 }

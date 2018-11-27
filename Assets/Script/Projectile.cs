@@ -20,8 +20,16 @@ public class Projectile : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        GameObject obj = collision.gameObject;
+
         if (collision.name == "Shreder")
         {
+            Destroy(gameObject);
+        }
+
+        if (obj.GetComponent<Attacker>())
+        {
+            obj.GetComponent<Health>().AplayDamage(damage);
             Destroy(gameObject);
         }
     }

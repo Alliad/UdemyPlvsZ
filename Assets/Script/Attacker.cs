@@ -24,10 +24,10 @@ public class Attacker : MonoBehaviour {
         }
 	}
 
-    private void OnTriggerEnter2D()
+    /*private void OnTriggerEnter2D()
     {
         Debug.Log(name + " on treggering");
-    }
+    }*/
 
     public void SetSpeed(float speed)
     {
@@ -36,7 +36,8 @@ public class Attacker : MonoBehaviour {
 
     public void StrikeCurrentTarget(float damage)
     {
-        Debug.Log(" Applay +" + damage + " damage from " + name);
+        Debug.Log(" Applay +" + damage + " damage to the " + currentTarget.name + " from " + name);
+        
         currentTarget.GetComponent<Health>().AplayDamage(damage);        
     }
 
