@@ -5,6 +5,7 @@ using UnityEngine;
 public class Button : MonoBehaviour {
 
     SpriteRenderer buttonSpriteRenderer;
+    [SerializeField] GameObject buttonController;
     
     // Use this for initialization
 	void Start () {
@@ -17,9 +18,15 @@ public class Button : MonoBehaviour {
 		
 	}
 
+    internal void DrawButtonToColor(Color buttonColor)
+    {
+        buttonSpriteRenderer.color = buttonColor;
+    }
+
     private void OnMouseDown()
     {
-        Debug.Log(gameObject.name + " pressed");
-        buttonSpriteRenderer.color = Color.white;
+        //Debug.Log(gameObject.name + " pressed");
+        DrawButtonToColor(Color.white);
+        buttonController.GetComponent<ButtonsController>().SwitchButtons(gameObject.name);
     }
 }

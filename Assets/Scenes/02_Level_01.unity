@@ -429,7 +429,6 @@ GameObject:
   - component: {fileID: 705524120}
   - component: {fileID: 705524119}
   - component: {fileID: 705524121}
-  - component: {fileID: 705524122}
   m_Layer: 0
   m_Name: Cactus
   m_TagString: Untagged
@@ -532,18 +531,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76edcd0b1d1402143bc7505caecfeda1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &705524122
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 705524117}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1184210157, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AllowSwitchOff: 0
+  buttonController: {fileID: 1699185558}
 --- !u!4 &741913189 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000569761310636, guid: b071e0379fdc8bc47bde0c12b3c9acc6,
@@ -1102,6 +1090,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76edcd0b1d1402143bc7505caecfeda1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonController: {fileID: 1699185558}
 --- !u!4 &1696590139 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4652457606417512, guid: b101a912394bccb4998c4016142c48ee,
@@ -1115,6 +1104,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1699185559}
+  - component: {fileID: 1699185560}
   m_Layer: 0
   m_Name: Buttons
   m_TagString: Untagged
@@ -1140,6 +1130,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1699185560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1699185558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ee0a73827f83cf4ea816c808126d965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttons:
+  - {fileID: 705524117}
+  - {fileID: 1619492701}
+  - {fileID: 2041788619}
+  - {fileID: 2030457340}
 --- !u!1 &1751881522
 GameObject:
   m_ObjectHideFlags: 0
@@ -1569,6 +1575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76edcd0b1d1402143bc7505caecfeda1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonController: {fileID: 1699185558}
 --- !u!4 &2040086859 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4652457606417512, guid: b101a912394bccb4998c4016142c48ee,
@@ -1687,6 +1694,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76edcd0b1d1402143bc7505caecfeda1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonController: {fileID: 1699185558}
 --- !u!1001 &2049104323
 Prefab:
   m_ObjectHideFlags: 0
