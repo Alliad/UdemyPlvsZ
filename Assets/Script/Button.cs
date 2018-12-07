@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class Button : MonoBehaviour {
 
+    public GameObject defenderPrefab;
+    public static GameObject selectedDefender;
     SpriteRenderer buttonSpriteRenderer;
-    [SerializeField] GameObject buttonController;
+    [SerializeField] ButtonsController buttonController;
+    
     
     // Use this for initialization
 	void Start () {
@@ -27,6 +30,7 @@ public class Button : MonoBehaviour {
     {
         //Debug.Log(gameObject.name + " pressed");
         DrawButtonToColor(Color.white);
-        buttonController.GetComponent<ButtonsController>().SwitchButtons(gameObject.name);
+        buttonController.SwitchButtons(gameObject.name);
+        selectedDefender = defenderPrefab;
     }
 }

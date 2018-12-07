@@ -22,6 +22,8 @@ public class Attacker : MonoBehaviour {
         {
             animator.SetBool("isAttacking", false);
         }
+
+        //Debug.Log(Button.selectedDefender);
 	}
 
     /*private void OnTriggerEnter2D()
