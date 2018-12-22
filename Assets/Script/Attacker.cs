@@ -6,7 +6,7 @@ using UnityEngine;
 public class Attacker : MonoBehaviour {
 
     [Tooltip("Average number of seconds between appearances")]
-    [SerializeField] private float seenEverySeconds;
+    [SerializeField] public float seenEverySeconds;
     private float currentSpeed;
 
     GameObject currentTarget;
