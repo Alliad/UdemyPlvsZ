@@ -40,7 +40,7 @@ public class Attacker : MonoBehaviour {
 
     public void StrikeCurrentTarget(float damage)
     {
-        Debug.Log(" Applay +" + damage + " damage to the " + currentTarget.name + " from " + name);
+        //Debug.Log(" Applay +" + damage + " damage to the " + currentTarget.name + " from " + name);
         
         currentTarget.GetComponent<Health>().AplayDamage(damage);        
     }

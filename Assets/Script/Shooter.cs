@@ -14,15 +14,20 @@ public class Shooter : MonoBehaviour {
     private void Start()
     {
         animator = GetComponent<Animator>();
-        projectileParent = GameObject.Find("Projectiles");
+        // Create projectile parent if necessary
+        CreateProjectileParent();
 
+        SetMyLaneSpawner();
+        Debug.Log(myLaneSpawner);
+    }
+
+    private void CreateProjectileParent()
+    {
+        projectileParent = GameObject.Find("Projectiles");
         if (!projectileParent)
         {
             projectileParent = new GameObject("Projectiles");
         }
-
-        SetMyLaneSpawner();
-        print(myLaneSpawner);
     }
 
     private void Update()
@@ -42,23 +47,28 @@ public class Shooter : MonoBehaviour {
         AttackerSpawner[] spawnerArray = GameObject.FindObjectsOfType<AttackerSpawner>();
         foreach (AttackerSpawner attackerSpawner in spawnerArray)
         {
-            Debug.Log(attackerSpawner.name + "  " + attackerSpawner.transform.position.y);
-            Debug.Log(name + "  " + transform.position.y);
+            //Debug.Log(attackerSpawner.name + "  " + attackerSpawner.transform.position.y);
+            //Debug.Log(name + "  " + transform.position.y);
             if (attackerSpawner.transform.position.y == transform.position.y)
             {
                 myLaneSpawner = attackerSpawner;
                 return;
-            }
-            
-                Debug.LogError(name + " can't find spawner on his line");
-            
+            }                        
         }
+
+        Debug.LogError(name + " can't find spawner on his line");
     }
 
     private bool IsAttackerAheadInLane()
     {
-
-        return true;
+        foreach (Transform child in myLaneSpawner.transform)
+        {
+            if (child.position.x > transform.position.x)
+            {
+                return true;
+            }            
+        }
+        return false;        
     }
 
     private void Fire()
