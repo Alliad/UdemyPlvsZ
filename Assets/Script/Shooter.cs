@@ -9,10 +9,11 @@ public class Shooter : MonoBehaviour {
     public GameObject gun;
     private GameObject projectileParent;
     private Animator animator;
-    private AttackerSpawner myLanerSpawner;
+    private AttackerSpawner myLaneSpawner;
 
     private void Start()
     {
+        animator = GetComponent<Animator>();
         projectileParent = GameObject.Find("Projectiles");
 
         if (!projectileParent)
@@ -20,7 +21,8 @@ public class Shooter : MonoBehaviour {
             projectileParent = new GameObject("Projectiles");
         }
 
-        animator = GetComponent<Animator>();
+        SetMyLaneSpawner();
+        print(myLaneSpawner);
     }
 
     private void Update()
@@ -34,22 +36,29 @@ public class Shooter : MonoBehaviour {
             animator.SetBool("isAttacking", false);
         }
     }
-
+    // Look through all spawners, and set myLaneSpawner if found
     private void SetMyLaneSpawner()
     {
-        var spawners[] = GameObject.FindObjectsOfType<AttackerSpawner>();
-        //Transform[] allAttackerSpawners = spawners.GetComponentInChildren<Transform>();
-
-        foreach (GameObject lanerSpawner in allAttackerSpawners)
+        AttackerSpawner[] spawnerArray = GameObject.FindObjectsOfType<AttackerSpawner>();
+        foreach (AttackerSpawner attackerSpawner in spawnerArray)
         {
-
+            Debug.Log(attackerSpawner.name + "  " + attackerSpawner.transform.position.y);
+            Debug.Log(name + "  " + transform.position.y);
+            if (attackerSpawner.transform.position.y == transform.position.y)
+            {
+                myLaneSpawner = attackerSpawner;
+                return;
+            }
+            
+                Debug.LogError(name + " can't find spawner on his line");
+            
         }
     }
 
     private bool IsAttackerAheadInLane()
     {
 
-        return false;
+        return true;
     }
 
     private void Fire()
