@@ -4,8 +4,16 @@ using UnityEngine;
 
 public class Defender : MonoBehaviour {
 
-	/*private void OnTriggerEnter2D()
+    [SerializeField] public int starCoast = 30;
+    StarDisplay starDisplay;
+
+    private void Start()
     {
-        Debug.Log(name + " on treggering");
-    }*/
+        starDisplay = GameObject.FindObjectOfType<StarDisplay>();
+    }
+
+    public void AddStars(int count)
+    {
+        starDisplay.AddStars(count);
+    }
 }
