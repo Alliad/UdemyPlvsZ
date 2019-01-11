@@ -34,7 +34,7 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadGame()
     {
-        Debug.Log("Load first level");
+        //Debug.Log("Load first level");
         SceneManager.LoadScene("02_Level_01");
         //FindObjectOfType<GameStatus>().ResetGameScore();
         //FindObjectOfType<GameStatus>().ResetGameScore();
