@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Defender : MonoBehaviour {
 
-    [SerializeField] public int starCoast = 30;
+    [SerializeField] public int starCoast;
     StarDisplay starDisplay;
 
     private void Start()

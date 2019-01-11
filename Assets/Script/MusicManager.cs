@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class MusicManager : MonoBehaviour {
 
     public AudioClip[] levelMusicChangeArray;
+    [SerializeField] private AudioClip winConditionClip;
     private AudioSource source;
 
     private void Awake()
@@ -30,6 +31,14 @@ public class MusicManager : MonoBehaviour {
             source.Play();
         }
         
+    }
+
+    public void PlayWinMusic()
+    {
+        Debug.Log("Play music method start");
+        source.clip = winConditionClip;
+        source.loop = false;
+        source.Play();
     }
 
     internal void ChangeVolume(float value)

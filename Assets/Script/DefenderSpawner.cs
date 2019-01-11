@@ -29,8 +29,7 @@ public class DefenderSpawner : MonoBehaviour {
 
     private void OnMouseDown()
     {
-        //Debug.Log(SnapToGrid(CalculateWorldPointsOfMouseClick(Input.mousePosition)));
-        //Debug.Log(Button.selectedDefender.GetComponent<Defender>().starCoast);
+        
         int defenderCost = Button.selectedDefender.GetComponent<Defender>().starCoast;
         if (starDisplay.UseStars(defenderCost) == StarDisplay.Status.SUCCESS)
         {
