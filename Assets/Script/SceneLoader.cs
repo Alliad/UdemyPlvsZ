@@ -8,6 +8,7 @@ public class SceneLoader : MonoBehaviour
 {
     [SerializeField] float delayInSeconds = 1f;
     [SerializeField] float delayBeforeLoadStartScene = 3f;
+    [SerializeField] float delayBeforeLoadWinScene = 3f;
 
     private void Start()
     {
@@ -60,7 +61,7 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadWinScreen()
     {
-        Debug.Log("Load Win Screen");
+        
         SceneManager.LoadScene("03a_WinScreen");
     }
 

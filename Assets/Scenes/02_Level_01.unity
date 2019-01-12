@@ -1852,7 +1852,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   winConditionTime: 5
-  mySceneLoader: {fileID: 0}
+  mySceneLoader: {fileID: 606029172}
 --- !u!114 &2070637980
 MonoBehaviour:
   m_ObjectHideFlags: 0
