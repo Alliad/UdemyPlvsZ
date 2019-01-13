@@ -59,11 +59,20 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene("03b_LoseScreen");
     }
 
-    public void LoadWinScreen()
+    public void LoadWinScreen(float delayInSeconds)
     {
-        
-        SceneManager.LoadScene("03a_WinScreen");
+        {
+            StartCoroutine(LoadWinScreenCoroutine(delayInSeconds));
+        }
     }
+
+    private IEnumerator LoadWinScreenCoroutine(float delayInSeconds)
+        {
+            yield return new WaitForSeconds(delayInSeconds);
+            SceneManager.LoadScene("03a_WinScreen");
+        }
+        
+    
 
     public void LoadOptionsScene()
     {

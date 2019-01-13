@@ -36,7 +36,7 @@ public class EnemySpawner : MonoBehaviour {
             newEnemy.GetComponent<EnemyPathing>().SetWaveConfig(waveConfig); 
 
             yield return new WaitForSeconds(waveConfig.GetTimeBetweenSpawns());
-            Debug.Log(enemyCount);
+            
         }
         
     }

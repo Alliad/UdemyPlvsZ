@@ -45,18 +45,6 @@ public class AttackerSpawner : MonoBehaviour
         //Debug.Log("Time.deltaTime = " + Time.deltaTime);
         //Debug.Log("Threshold = " + threshold);
 
-        if (UnityEngine.Random.value < threshold)
-        {
-            //Debug.Log("Random value = " + UnityEngine.Random.value);
-            //Debug.Log("Bool value = True");
-            return true;
-        }
-        else
-        {
-            //Debug.Log("Random value = " + UnityEngine.Random.value);
-            //Debug.Log("Bool value = False");
-            return false;
-        }
-        
+        return (UnityEngine.Random.value < threshold);        
     }
 }
