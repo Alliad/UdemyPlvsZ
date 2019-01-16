@@ -13,13 +13,14 @@ public class GameTimer : MonoBehaviour
     private MusicManager myMusicManager;
     private AudioSource myAudioSource;
     private bool winStatus = false;
+    private GameObject[] attackersArray;
     
 
     // Start is called before the first frame update
     void Start()
     {
         myMusicManager = FindObjectOfType<MusicManager>();
-        //myAudioSource = myMusicManager.GetComponent<AudioSource>();
+        myAudioSource = myMusicManager.GetComponent<AudioSource>();
         timeToTheEndOfTheLevelSlider = GetComponent<Slider>();
         timeToTheEndOfTheLevelSlider.maxValue = winConditionTime;
 
@@ -35,10 +36,7 @@ public class GameTimer : MonoBehaviour
             timeToTheEndOfTheLevelSlider.value = Time.timeSinceLevelLoad;
             if (Time.timeSinceLevelLoad >= winConditionTime)
             {
-                winStatus = true;
-                myMusicManager.PlayWinMusic();
-                winGrattersText.ShowWinText();
-                mySceneLoader.LoadWinScreen(myAudioSource.clip.length);
+                StartWinActions();
             }
         }
         /*if (winStatus == true && !myAudioSource.isPlaying == true)
@@ -46,5 +44,23 @@ public class GameTimer : MonoBehaviour
             Debug.Log("Start Win screen load coroutine");
             mySceneLoader.LoadWinScreen(5);
         }*/
+    }
+
+    private void StartWinActions()
+    {
+        winStatus = true;
+        DeleteAllAttackers();
+        myMusicManager.PlayWinMusic();
+        winGrattersText.ShowWinText();
+        mySceneLoader.LoadWinScreen(myAudioSource.clip.length);
+    }
+
+    private void DeleteAllAttackers()
+    {
+        attackersArray = GameObject.FindGameObjectsWithTag("destroyOnWin");
+        foreach (GameObject attacker in attackersArray)
+        {
+            Destroy(attacker);
+        }
     }
 }

@@ -490,10 +490,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1047134424}
-    - target: {fileID: 1536579622, guid: b51ef91082cbdf94585268d1df30b12d, type: 3}
-      propertyPath: totalStarsCount
-      value: 200
-      objectReference: {fileID: 0}
     - target: {fileID: 2070637979, guid: b51ef91082cbdf94585268d1df30b12d, type: 3}
       propertyPath: mySceneLoader
       value: 
@@ -948,6 +944,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Spawners
+      objectReference: {fileID: 0}
+    - target: {fileID: 6001888605691199130, guid: a862edf68b66e7341b125651b7a10dcb,
+        type: 3}
+      propertyPath: m_TagString
+      value: destroyOnWin
       objectReference: {fileID: 0}
     - target: {fileID: 6001888605691199131, guid: a862edf68b66e7341b125651b7a10dcb,
         type: 3}

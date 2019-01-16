@@ -493,7 +493,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57b181a93f55726448f104a995f8170e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalStarsCount: 100
+  totalStarsCount: 200
 --- !u!1 &1614917375
 GameObject:
   m_ObjectHideFlags: 0
@@ -705,7 +705,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14f5b8fea524bf84a8df6ead965a7f8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  winConditionTime: 120
+  winConditionTime: 15
   mySceneLoader: {fileID: 0}
   winGrattersText: {fileID: 387332738}
 --- !u!1 &2141521191
