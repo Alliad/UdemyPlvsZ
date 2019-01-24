@@ -7,7 +7,7 @@ public class Ball : MonoBehaviour {
 
     private Rigidbody ballRB;
     private AudioSource myAudioSource;
-    [SerializeField] private float impulse;
+    [SerializeField] private Vector3 force;
     
     
     
@@ -23,7 +23,7 @@ public class Ball : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            ballRB.AddForce(0, 0, impulse, ForceMode.Impulse);
+            ballRB.AddForce(force.x, force.y, force.z, ForceMode.Impulse);
             myAudioSource.Play();
         }
 	}

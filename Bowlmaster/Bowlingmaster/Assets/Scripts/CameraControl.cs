@@ -7,13 +7,14 @@ public class CameraControl : MonoBehaviour {
     [SerializeField] private GameObject ball;
 
     // Offset betwine main camera and the ball
-    private Vector3 offset;
+    private float offset;
     private Vector3 cameraPosition;
-    private float stopPozition = 1800; 
+    private float stopPozition = 1800f; 
     
     // Use this for initialization
 	void Start () {
-        offset = new Vector3 (gameObject.transform.position.x, gameObject.transform.position.y, ball.transform.position.z - gameObject.transform.position.z);
+        offset = ball.transform.position.z - transform.position.z;
+        cameraPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
         Debug.Log(offset);
     }
 	
@@ -22,7 +23,8 @@ public class CameraControl : MonoBehaviour {
 
         if (ball.transform.position.z <= stopPozition)
         {
-            gameObject.transform.position = new Vector3 (gameObject.transform.position.x, gameObject.transform.position.y, ball.transform.position.z - offset.z);
+            cameraPosition.z = ball.transform.position.z - offset;
+            transform.position = cameraPosition;
         }
         
 
