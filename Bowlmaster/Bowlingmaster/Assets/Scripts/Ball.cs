@@ -16,17 +16,25 @@ public class Ball : MonoBehaviour {
 
         ballRB = GetComponent<Rigidbody>();
         myAudioSource = GetComponent<AudioSource>();
+        ballRB.useGravity = false;
 	}
 	
 	// Update is called once per frame
-	void Update () {
-
+	void Update ()
+    {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            ballRB.AddForce(force.x, force.y, force.z, ForceMode.Impulse);
-            myAudioSource.Play();
+            LaunchTheBall(force);
         }
-	}
+    }
+
+    public void LaunchTheBall(Vector3 startForce)
+    {
+        ballRB.useGravity = true;
+        ballRB.AddForce(startForce.x, startForce.y, startForce.z, ForceMode.Impulse);
+        myAudioSource.Play();
+    }
+
 
     /*private void OnTriggerEnter(Collider other)
     {
