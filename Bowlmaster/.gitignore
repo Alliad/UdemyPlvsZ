@@ -6,13 +6,13 @@
 /[Ll]ogs/
 /Assets/AssetStoreTools*
 
-/Bowlmaster/[Ll]ibrary/
-/Bowlmaster/[Ll]ogs/
-/Bowlmaster/[Tt]emp/
-/Bowlmaster/[Oo]bj/
-/Bowlmaster/[Bb]uild/
-/Bowlmaster/[Bb]uilds/
-/Bowlmaster/Assets/AssetStoreTools*
+/Bowlingmaster/[Ll]ibrary/
+/Bowlingmaster/[Ll]ogs/
+/Bowlingmaster/[Tt]emp/
+/Bowlingmaster/[Oo]bj/
+/Bowlingmaster/[Bb]uild/
+/Bowlingmaster/[Bb]uilds/
+/Bowlingmaster/Assets/AssetStoreTools*
 
 # Visual Studio cache directory
 .vs/
