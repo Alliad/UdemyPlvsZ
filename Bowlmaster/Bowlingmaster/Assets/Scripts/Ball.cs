@@ -8,11 +8,12 @@ public class Ball : MonoBehaviour {
     private Rigidbody ballRB;
     private AudioSource myAudioSource;
     [SerializeField] private Vector3 force;
-    
-    
-    
+    [SerializeField] private float impulseMultiplyer;
+
+
+
     // Use this for initialization
-	void Start () {
+    void Start () {
 
         ballRB = GetComponent<Rigidbody>();
         myAudioSource = GetComponent<AudioSource>();
@@ -31,7 +32,7 @@ public class Ball : MonoBehaviour {
     public void LaunchTheBall(Vector3 startForce)
     {
         ballRB.useGravity = true;
-        ballRB.AddForce(startForce.x, startForce.y, startForce.z, ForceMode.Impulse);
+        ballRB.AddForce(impulseMultiplyer * startForce.x, startForce.y, impulseMultiplyer * startForce.z, ForceMode.Impulse);
         myAudioSource.Play();
     }
 

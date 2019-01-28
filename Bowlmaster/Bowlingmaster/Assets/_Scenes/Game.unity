@@ -688,8 +688,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 4327957738420863071, guid: 7af6bfb8ee4acbb4ca7dacaa1b83a988,
-            type: 3}
+        - m_Target: {fileID: 4125181720566895616}
           m_MethodName: DragStart
           m_Mode: 1
           m_Arguments:
@@ -805,7 +804,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2098637541}
   - component: {fileID: 2098637540}
-  - component: {fileID: 2098637539}
   m_Layer: 0
   m_Name: TopCamera
   m_TagString: Untagged
@@ -813,14 +811,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &2098637539
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2098637538}
-  m_Enabled: 1
 --- !u!20 &2098637540
 Camera:
   m_ObjectHideFlags: 0
@@ -1012,6 +1002,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125181720089614543, guid: 7af6bfb8ee4acbb4ca7dacaa1b83a988,
+        type: 3}
+      propertyPath: impulseMultiplyer
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7af6bfb8ee4acbb4ca7dacaa1b83a988, type: 3}
