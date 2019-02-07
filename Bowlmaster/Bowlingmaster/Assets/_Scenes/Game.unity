@@ -664,7 +664,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963355169}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 216.2, z: 1877.3}
+  m_LocalPosition: {x: 0, y: 55, z: 1877.3}
   m_LocalScale: {x: 120, y: 120, z: 240}
   m_Children: []
   m_Father: {fileID: 1465659625}
@@ -682,6 +682,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4407a2df359176741b9533f99db70aa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  standingPinsDisplay: {fileID: 1734919380}
 --- !u!65 &963355172
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -690,7 +691,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963355169}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -1489,7 +1490,7 @@ PrefabInstance:
     - target: {fileID: 1212042767903058883, guid: 743541872c8a2174b9baa2e4daad7989,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1212042767903058883, guid: 743541872c8a2174b9baa2e4daad7989,
         type: 3}

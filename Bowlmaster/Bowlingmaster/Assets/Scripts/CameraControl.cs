@@ -15,7 +15,7 @@ public class CameraControl : MonoBehaviour {
 	void Start () {
         offset = ball.transform.position.z - transform.position.z;
         cameraPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-        Debug.Log(offset);
+        //Debug.Log(offset);
     }
 	
 	// Update is called once per frame
